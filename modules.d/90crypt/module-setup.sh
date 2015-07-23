@@ -24,7 +24,9 @@ depends() {
 
 # called by dracut
 installkernel() {
-    instmods dm_crypt =crypto
+    arch=$(arch)
+    [[ $arch == x86_64 ]] && arch=x86
+    instmods dm_crypt =crypto =drivers/crypto =arch/$arch/crypto
 }
 
 # called by dracut

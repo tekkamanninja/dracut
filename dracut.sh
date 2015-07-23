@@ -831,7 +831,6 @@ trap '
 # clean up after ourselves no matter how we die.
 trap 'exit 1;' SIGINT
 
-export DRACUT_KERNEL_LAZY="1"
 export DRACUT_RESOLVE_LAZY="1"
 
 if [[ $print_cmdline ]]; then
